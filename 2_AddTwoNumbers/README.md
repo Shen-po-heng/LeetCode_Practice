@@ -7,3 +7,6 @@ My idea: 1. get 2 numbers from the digits of 2 list
          3. and, store the sum into the returned list
 
 What problem? If the number is too big then, that can't be stored.
+
+2nd try was okay. I just add the digit one by one, if the digit is null, then just assign them null or 0.
+I think this is also the same idea for C to solve big number problem.

@@ -10,36 +10,24 @@
  
 class Solution {
 public:
-    int getValue(ListNode* l){
-        int num{0};
-        int count{1};
-        ListNode* tmp=l;
-        while(tmp!=nullptr){
-            num+=tmp->val*count;
-            tmp=tmp->next;
-            count*=10;
-        }
-        return num;
-    }
+    
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        //get the value from list digit
-        int num1{};
-        int num2{};
-        num1=getValue(l1);
-        num2=getValue(l2);
-
-        //sum of two Numbers
-        int num_r=num1+num2;
-
-        //store num_r
-        ListNode* l_r=new ListNode(num_r%10);
-        num_r/=10;
+        ListNode* l_r =  new ListNode(0);
         ListNode* tmp=l_r;
-        while(num_r!=0){
-            tmp->next=new ListNode(num_r%10);
-            tmp=tmp->next;
-            num_r/=10;
+        int carry = 0;
+        while (l1 != nullptr || l2 != nullptr || carry != 0) {
+            int digit_1 = (l1 != nullptr) ? l1->val : 0;
+            int digit_2 = (l2 != nullptr) ? l2->val : 0;
+            int sum = carry + digit_1 + digit_2;
+            carry = sum / 10;
+            tmp->next = new ListNode(sum % 10);
+            tmp = tmp->next;
+            l1 = (l1 != nullptr) ? l1->next : nullptr;
+            l2 = (l2 != nullptr) ? l2->next : nullptr;
         }
+        tmp=l_r;
+        l_r=l_r->next;
+        delete tmp;  // Freeing the memory allocated for dummyHead
         return l_r;
     }
 };
