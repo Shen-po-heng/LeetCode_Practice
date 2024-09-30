@@ -1,4 +1,4 @@
-# Merge Sorted Array
+# Remove Element
 Question description: https://leetcode.com/problems/remove-element/?envType=study-plan-v2&envId=top-interview-150
 My 1st try (30.09.2024) was okay.
 My idea: is a bit similiar to prob 27 (Remove Element). I used another vector and a pointer to store the result.
