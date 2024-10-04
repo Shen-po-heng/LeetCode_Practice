@@ -1,3 +1,4 @@
 # LeetCode_Practice
-# LeetCode
-# LeetCode
+
+# Amazon high frequency questions
+
