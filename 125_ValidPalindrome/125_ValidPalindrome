@@ -1,0 +1,34 @@
+# 125 Valid Palindrome
+Question description: https://leetcode.com/problems/valid-palindrome/description/?envType=study-plan-v2&envId=top-interview-150
+
+My 1st try (04.10.2024) was okay.
+My idea: it mentioned ascll code so I just remove all blank and consider those number and alphabet to copy them and to compare them.
+1. declare a string type of variable to copy a whole string with only aplhanumeric characters
+2. compare them in a string from left and right
+
+But after I checked the recommended solution, actually there is built-in function called "isalnum()" and it looks much clear 
+and also other built in function  string.resize(), reverse_copy();
+
+```
+ string filtered_string, reversed_string;
+
+        for (auto ch : s) {
+            if (isalnum(ch)) filtered_string += tolower(ch);
+        }
+
+        reversed_string.resize(filtered_string.size());
+        reverse_copy(filtered_string.begin(), filtered_string.end(),
+                     reversed_string.begin());
+
+```
+
+another solution is also good to be learnt, we actaully, can put two variable into loop:
+
+```
+for (int i = 0, j = s.size() - 1; i < j; i++, j--) {
+            while (i < j && !isalnum(s[i])) i++;
+            while (i < j && !isalnum(s[j])) j--;
+
+            if (tolower(s[i]) != tolower(s[j])) return false;
+        }
+```
