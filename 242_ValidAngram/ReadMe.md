@@ -9,3 +9,8 @@ My idea: the intution is very clear to use sorting method and to run through the
 Still can consider hashmap and bit operation (other days...)
 
 I also see the solution can use counter by alphabet.
+
+My 2nd try: hashmap (06.10.2024)
+The idea:store each alphabet into unorder map, and calculate them, actually, I think use map is also okay.
+Just think about key-value
+But the time complexity will be different. map is the use of red-blact tree data structure, which has O(nlogn), but unordermap is close to hash table O(1). 
