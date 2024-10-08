@@ -13,3 +13,4 @@ My 1st try (09.10.2024) was not okay. I supposed the intervals are already sorte
         return intervals;
 '''
 
+My 2nd try works not, I sort them firstly. and do similar thing, but I try to copy them into the other vector to avoid potential issue.
