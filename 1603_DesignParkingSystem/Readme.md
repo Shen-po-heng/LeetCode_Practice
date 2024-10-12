@@ -2,7 +2,7 @@
 
 Question description:https://leetcode.com/problems/design-parking-system/description/?envType=study-plan-v2&envId=programming-skills
 
-My 1st try (13.10.2024) was not okay.
+My 1st try (13.10.2024) was okay.
 
 However, I think the recommended solution is pretty, but maybe should do some change;
 ``` cpp
